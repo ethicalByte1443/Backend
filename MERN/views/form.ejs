@@ -1,0 +1,53 @@
+/* form.html */
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Sexy Modern Site</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h2>✨ MySexySite</h2>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="profile.html">Profile</a>
+            <a href="form.html">Form</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Fill the Form</h2>
+        <form action="/get-form-data" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" placeholder="@@@@@@@@@@" required>
+
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+    </script>
+
+</body>
+
+</html>
