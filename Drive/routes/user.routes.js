@@ -29,8 +29,16 @@ router.post('/register',
     (req, res) => {
 
         const errors = validationResult(req)
-        console.log(errors);
-        res.send(errors)
+        if(errors.isEmpty()){
+            return res.status(200).json({
+                errors : errors.array(),
+                message: 'Data accepted'
+            })
+        }
+        return res.status(400).json({
+            errors: errors.array(),
+            message: 'Invalid Data'
+        })
 })
 
 module.exports = router
