@@ -16,4 +16,4 @@ app.use(express.urlencoded({extended : true}))
 
 app.use('/user', userRouter)
 
-app.listen(3000, console.log('Server started at http://localhost:3000/user'))
+app.listen(3001, console.log('Server started at http://localhost:3001/user'))
