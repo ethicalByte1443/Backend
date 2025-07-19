@@ -1,5 +1,12 @@
+// hoisitng
+console.log(b);             // --> undefined
 
-console.log(a);
+var b = 20;
 
-var a = 12;
+
+// tdz
+console.log(a);             // --> error
+
+let a = 12;
+
 
