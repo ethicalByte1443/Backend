@@ -69,7 +69,9 @@ console.log("" + false);  // Output: "false"
 
 ## 4. Operations involving `NaN` and `undefined`
 
-- Any arithmetic operation involving `NaN` and/or `undefined` results in `NaN`:
+- `NaN` stands for "Not a Number" — it represents a failed or invalid number operation.
+- Despite its name, the type of `NaN` is `number`.
+- Any arithmetic operation involving `NaN` or `undefined` results in `NaN`:
 
 ```
 console.log(NaN + undefined);  // Output: NaN
@@ -78,20 +80,34 @@ console.log(undefined + NaN);  // Output: NaN
 
 ---
 
-# Summary
+## 5. `undefined` vs `null`
 
-| Operation         | Result Type               | Explanation                                     |
-|-------------------|---------------------------|------------------------------------------------|
-| `"5" + 1`         | String                    | Number converted to string and concatenated    |
-| `"5" - 1`         | Number                    | String converted to number for subtraction     |
-| `true + false`    | Number                    | Boolean converted to numbers (1 + 0 = 1)       |
-| `"" + true`       | String                    | Boolean converted to string for concatenation  |
-| `NaN + undefined` | Number (`NaN`)            | Result is `NaN` due to invalid arithmetic       |
-| `if(null)`        | Falsy                     | `null` is falsy, so condition fails            |
+- `undefined` means a variable has been declared but **not assigned** any value yet.
+- `null` is an assignment value that represents **no value** or **empty** — it must be assigned explicitly.
+
+```
+let x;
+console.log(x);  // Output: undefined (default)
+x = null;
+console.log(x);  // Output: null (manually assigned)
+```
 
 ---
 
+# Summary
 
-```
-Keep these rules in mind to better understand implicit type conversions in JavaScript!
+| Operation/Concept       | Result/Meaning                                  | Explanation                                     |
+|------------------------|-------------------------------------------------|------------------------------------------------|
+| `"5" + 1`              | String                                          | Number converted to string and concatenated    |
+| `"5" - 1`              | Number                                          | String converted to number for subtraction     |
+| `true + false`         | Number                                          | Boolean converted to numbers (1 + 0 = 1)       |
+| `"" + true`            | String                                          | Boolean converted to string for concatenation  |
+| `NaN + undefined`      | Number (`NaN`)                                  | Result is `NaN` due to invalid arithmetic       |
+| `if(null)`             | Falsy                                           | `null` is falsy, so condition fails            |
+| `undefined`             | Variable declared but not assigned, default state | Default state of uninitialized variables         |
+| `null`                  | Explicitly assigned "no value"                 | Used to represent empty or intentionally no value |
+
+---
+
+Keep these rules in mind to better understand implicit type conversions and special values in JavaScript!
 ```

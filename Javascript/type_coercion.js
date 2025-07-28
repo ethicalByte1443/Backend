@@ -25,3 +25,14 @@ console.log("" + true);         // true
 console.log("" + false);         // false
 console.log(NaN + undefined);       // NaN
 console.log(undefined + NaN);       // NaN
+console.log(NaN + 1);               // NaN
+console.log(null + 1);              // 1
+
+
+// NaN is the failed number operation in javascript thats why it is a number at the end of the day
+
+// undefined vs null
+let x;
+console.log(x);         // undefined --> dafault
+x = null;
+console.log(x);         // manually assigned value
