@@ -9,9 +9,19 @@ console.log("5" - 1);     // number
 
 // **************************************
 //  0 false "" null undefined NaN document.all  => false
+
 if(null){
     console.log("true");
 }
 else{
     console.log("false");
 }
+
+
+// true + false
+console.log("type system");
+console.log(true + false);      // 1
+console.log("" + true);         // true
+console.log("" + false);         // false
+console.log(NaN + undefined);       // NaN
+console.log(undefined + NaN);       // NaN
